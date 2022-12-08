@@ -1,0 +1,90 @@
+PS D:\python> python data_sampling.py
+
+ Original data (Population): 
+    EMPLOYEE_ID FIRST_NAME  LAST_NAME     EMAIL  PHONE_NUMBER  HIRE_DATE    JOB_ID  SALARY  MANAGER_ID  DEPARTMENT_ID
+0          198     Donald   OConnell  DOCONNEL  650.507.9833  21-Jun-07  SH_CLERK    2600         124             50
+1          199    Douglas      Grant    DGRANT  650.507.9844  13-Jan-08  SH_CLERK    2600         124             50
+2          200   Jennifer     Whalen   JWHALEN  515.123.4444  17-Sep-03   AD_ASST    4400         101             50
+3          201    Michael  Hartstein  MHARTSTE  515.123.5555  17-Feb-04    MK_MAN   13000         100             50
+4          202        Pat        Fay      PFAY  603.123.6666  17-Aug-05    MK_REP    6000         201             50
+
+ Random sampling: 
+     EMPLOYEE_ID FIRST_NAME  LAST_NAME     EMAIL  PHONE_NUMBER  HIRE_DATE      JOB_ID  SALARY  MANAGER_ID  DEPARTMENT_ID
+9           100     Steven       King     SKING  515.123.4567  17-Jun-03     AD_PRES   24000         205             50
+14          105      David     Austin   DAUSTIN  590.423.4569  25-Jun-05     IT_PROG    4800         103             50
+43          134    Michael     Rogers   MROGERS  650.127.1834  26-Aug-06    ST_CLERK    2900         122            110
+2           200   Jennifer     Whalen   JWHALEN  515.123.4444  17-Sep-03     AD_ASST    4400         101             50
+15          106      Valli  Pataballa  VPATABAL  590.423.4560  05-Feb-06     IT_PROG    4800         103             50
+32          123     Shanta    Vollman  SVOLLMAN  650.123.4234  10-Oct-05      ST_MAN    6500         100            100
+29          120    Matthew      Weiss    MWEISS  650.123.1234  18-Jul-04      ST_MAN    8000         100            100
+4           202        Pat        Fay      PFAY  603.123.6666  17-Aug-05      MK_REP    6000         201             50
+39          130      Mozhe   Atkinson  MATKINSO  650.124.6234  30-Oct-05    ST_CLERK    2800         121            100
+20          111     Ismael    Sciarra  ISCIARRA  515.124.4369  30-Sep-05  FI_ACCOUNT    7700         108            100
+
+ Systematic sampling: 
+     EMPLOYEE_ID   FIRST_NAME LAST_NAME     EMAIL  PHONE_NUMBER  HIRE_DATE      JOB_ID  SALARY  MANAGER_ID  DEPARTMENT_ID
+1           199      Douglas     Grant    DGRANT  650.507.9844  13-Jan-08    SH_CLERK    2600         124             50
+6           204      Hermann      Baer     HBAER  515.123.8888  07-Jun-02      PR_REP   10000         101             50
+11          102          Lex   De Haan   LDEHAAN  515.123.4569  13-Jan-01       AD_VP   17000         100             50
+16          107        Diana   Lorentz  DLORENTZ  590.423.5567  07-Feb-07     IT_PROG    4200         103             50
+21          112  Jose Manuel     Urman   JMURMAN  515.124.4469  07-Mar-06  FI_ACCOUNT    7800         108            100
+26          117        Sigal    Tobias   STOBIAS  515.127.4564  24-Jul-05    PU_CLERK    2800         114            100
+31          122        Payam  Kaufling  PKAUFLIN  650.123.3234  01-May-03      ST_MAN    7900         100            100
+36          127        James    Landry   JLANDRY  650.124.1334  14-Jan-07    ST_CLERK    2400         120            100
+41          132           TJ     Olson   TJOLSON  650.124.8234  10-Apr-07    ST_CLERK    2100         121            110
+46          137       Renske    Ladwig   RLADWIG  650.121.1234  14-Jul-03    ST_CLERK    3600         123            110
+
+ Clustered sampling: 
+     EMPLOYEE_ID FIRST_NAME LAST_NAME     EMAIL  PHONE_NUMBER  HIRE_DATE      JOB_ID  SALARY  MANAGER_ID  DEPARTMENT_ID  CL_ID
+22          113       Luis      Popp     LPOPP  515.124.4567  07-Dec-07  FI_ACCOUNT    6900         108            100      0
+2           200   Jennifer    Whalen   JWHALEN  515.123.4444  17-Sep-03     AD_ASST    4400         101             50      0
+37          128     Steven    Markle   SMARKLE  650.124.1434  08-Mar-08    ST_CLERK    2200         120            100      0
+6           204    Hermann      Baer     HBAER  515.123.8888  07-Jun-02      PR_REP   10000         101             50      0
+7           205    Shelley   Higgins  SHIGGINS  515.123.8080  07-Jun-02      AC_MGR   12008         101             50      0
+48          139       John       Seo      JSEO  650.121.2019  12-Feb-06    ST_CLERK    2700         123            110      2
+4           202        Pat       Fay      PFAY  603.123.6666  17-Aug-05      MK_REP    6000         201             50      2
+44          135         Ki       Gee      KGEE  650.127.1734  12-Dec-07    ST_CLERK    2400         122            110      2
+24          115  Alexander      Khoo     AKHOO  515.127.4562  18-May-03    PU_CLERK    3100         114            100      2
+14          105      David    Austin   DAUSTIN  590.423.4569  25-Jun-05     IT_PROG    4800         103             50      2
+100    6
+50     4
+Name: DEPARTMENT_ID, dtype: int64
+
+ Weighted sampling:
+                  EMPLOYEE_ID FIRST_NAME LAST_NAME     EMAIL  PHONE_NUMBER  HIRE_DATE    JOB_ID  SALARY  MANAGER_ID
+DEPARTMENT_ID
+50            0          105      David    Austin   DAUSTIN  590.423.4569  25-Jun-05   IT_PROG    4800         103
+              1          101      Neena   Kochhar  NKOCHHAR  515.123.4568  21-Sep-05     AD_VP   17000         100
+              2          202        Pat       Fay      PFAY  603.123.6666  17-Aug-05    MK_REP    6000         201
+              3          199    Douglas     Grant    DGRANT  650.507.9844  13-Jan-08  SH_CLERK    2600         124
+100           0          120    Matthew     Weiss    MWEISS  650.123.1234  18-Jul-04    ST_MAN    8000         100
+              1          115  Alexander      Khoo     AKHOO  515.127.4562  18-May-03  PU_CLERK    3100         114
+              2          129      Laura    Bissot   LBISSOT  650.124.5234  20-Aug-05  ST_CLERK    3300         121
+              3          123     Shanta   Vollman  SVOLLMAN  650.123.4234  10-Oct-05    ST_MAN    6500         100
+              4          116     Shelli     Baida    SBAIDA  515.127.4563  24-Dec-05  PU_CLERK    2900         114
+              5          122      Payam  Kaufling  PKAUFLIN  650.123.3234  01-May-03    ST_MAN    7900         100
+
+ Stratified sampling:
+    EMPLOYEE_ID FIRST_NAME  LAST_NAME     EMAIL  PHONE_NUMBER  HIRE_DATE      JOB_ID  SALARY  MANAGER_ID  DEPARTMENT_ID
+0          102        Lex    De Haan   LDEHAAN  515.123.4569  13-Jan-01       AD_VP   17000         100             50
+1          204    Hermann       Baer     HBAER  515.123.8888  07-Jun-02      PR_REP   10000         101             50
+2          107      Diana    Lorentz  DLORENTZ  590.423.5567  07-Feb-07     IT_PROG    4200         103             50
+3          206    William      Gietz    WGIETZ  515.123.8181  07-Jun-02  AC_ACCOUNT    8300         205             50
+4          130      Mozhe   Atkinson  MATKINSO  650.124.6234  30-Oct-05    ST_CLERK    2800         121            100
+5          111     Ismael    Sciarra  ISCIARRA  515.124.4369  30-Sep-05  FI_ACCOUNT    7700         108            100
+6          116     Shelli      Baida    SBAIDA  515.127.4563  24-Dec-05    PU_CLERK    2900         114            100
+7          123     Shanta    Vollman  SVOLLMAN  650.123.4234  10-Oct-05      ST_MAN    6500         100            100
+8          128     Steven     Markle   SMARKLE  650.124.1434  08-Mar-08    ST_CLERK    2200         120            100
+9          117      Sigal     Tobias   STOBIAS  515.127.4564  24-Jul-05    PU_CLERK    2800         114            100
+0          104      Bruce      Ernst    BERNST  590.423.4568  21-May-07     IT_PROG    6000         103             50
+1          100     Steven       King     SKING  515.123.4567  17-Jun-03     AD_PRES   24000         205             50
+2          106      Valli  Pataballa  VPATABAL  590.423.4560  05-Feb-06     IT_PROG    4800         103             50
+3          103  Alexander     Hunold   AHUNOLD  590.423.4567  03-Jan-06     IT_PROG    9000         102             50
+4          121       Adam      Fripp    AFRIPP  650.123.2234  10-Apr-05      ST_MAN    8200         100            100
+5          130      Mozhe   Atkinson  MATKINSO  650.124.6234  30-Oct-05    ST_CLERK    2800         121            100
+6          116     Shelli      Baida    SBAIDA  515.127.4563  24-Dec-05    PU_CLERK    2900         114            100
+7          125      Julia      Nayer    JNAYER  650.124.1214  16-Jul-05    ST_CLERK    3200         120            100
+8          111     Ismael    Sciarra  ISCIARRA  515.124.4369  30-Sep-05  FI_ACCOUNT    7700         108            100
+9          118        Guy     Himuro   GHIMURO  515.127.4565  15-Nov-06    PU_CLERK    2600         114            100 
+
+PS D:\python> 
